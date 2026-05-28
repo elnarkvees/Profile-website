@@ -114,3 +114,32 @@ body {
   font-size: 30px;
   color: white;
 }
+
+/* HERO SECTION */
+.hero{
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 120px 20px;
+background:
+linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+url('elvis.jpg') center/cover;
+}
+
+.hero-content h1{
+font-size: 70px;
+margin-bottom: 15px;
+letter-spacing: 3px;
+}
+
+.hero-content span{
+color: #00ff99;
+}
+
+.hero-content p{
+font-size: 22px;
+color: #ccc;
+margin-bottom: 30px;
+}
