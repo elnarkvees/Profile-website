@@ -45,10 +45,11 @@ body {
 }
 
 .menu-btn span{
-  height: 4px;
+  height: 5px;
   width: 100%;
-  background: white;
+  background: #00ff99;
   border-radius: 10px;
+  box-shadow: 0 0 10px #00ff99;
 }
 
 /* SIDE MENU */
