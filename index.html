@@ -230,18 +230,48 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
+<nav class="navbar">
 
-    <div class="logo">ELNARK VEES</div>
+  <!-- LOGO -->
+  <div class="logo">
+    ELNARK<span>VEES</span>
+  </div>
 
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#music">Music</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
+  <!-- HAMBURGER BUTTON -->
+  <div class="menu-btn" onclick="openMenu()">
 
-  </nav>
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
+
+</nav>
+
+<!-- SIDE MENU -->
+<div class="side-menu" id="sideMenu">
+
+  <div class="close-btn" onclick="closeMenu()">✕</div>
+
+  <h1>ELNARK VEES</h1>
+
+  <a href="#music">MUSIC</a>
+  <a href="#about">ABOUT</a>
+  <a href="#contact">CONTACT</a>
+  <a href="#">VIDEOS</a>
+  <a href="#">SHOP</a>
+
+  <!-- SOCIALS -->
+  <div class="menu-socials">
+
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-spotify"></i></a>
+
+  </div>
+
+</div>
 
   <!-- HERO -->
   <section class="hero" id="home">
