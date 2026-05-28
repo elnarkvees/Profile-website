@@ -1,8 +1,9 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #f9f9f9;
-  color: #222;
+  background: #0f0f0f;
+  color: white;
+  overflow-x: hidden;
 }
 
 /* NAVBAR */
