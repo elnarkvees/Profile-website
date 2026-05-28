@@ -18,3 +18,97 @@ body {
   background: rgba(0,0,0,0.5);
   backdrop-filter: blur(8px);
 }
+
+/* GRAFFITI LOGO */
+.logo{
+  font-size: 38px;
+  font-weight: 900;
+  color: white;
+  line-height: 0.9;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+  text-shadow: 0 0 10px #00ff99;
+}
+
+.logo span{
+  color: #00ff99;
+}
+
+/* HAMBURGER */
+.menu-btn{
+  width: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.menu-btn span{
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+}
+
+/* SIDE MENU */
+.side-menu{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  background: black;
+  z-index: 2000;
+  padding: 100px 40px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu.active{
+  right: 0;
+}
+
+/* CLOSE BUTTON */
+.close-btn{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+/* MENU TITLE */
+.side-menu h1{
+  color: #00ff99;
+  font-size: 45px;
+  margin-bottom: 50px;
+}
+
+/* MENU LINKS */
+.side-menu a{
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 20px 0;
+  transition: 0.3s;
+}
+
+.side-menu a:hover{
+  color: #00ff99;
+  transform: translateX(10px);
+}
+
+/* SOCIAL ICONS */
+.menu-socials{
+  margin-top: auto;
+  display: flex;
+  gap: 25px;
+}
+
+.menu-socials a{
+  font-size: 30px;
+  color: white;
+}
