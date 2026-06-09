@@ -37,9 +37,10 @@ body{
 }
 
 .logo{
-  font-size:2rem;
+  font-size:1.8rem;
   font-weight:900;
-  line-height:.8;
+  letter-spacing:3px;
+  text-transform:uppercase;
 }
 
 .logo span{
@@ -275,4 +276,22 @@ footer{
     width:80%;
   }
 
+}
+
+.menu-socials{
+  margin-top:50px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+}
+
+.menu-socials a{
+  color:white;
+  font-size:28px;
+  transition:.3s;
+}
+
+.menu-socials a:hover{
+  color:var(--green);
+  transform:translateY(-5px);
 }
