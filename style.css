@@ -279,9 +279,11 @@ footer{
     grid-template-columns:1fr;
   }
 
-.side-menu{
-  width:75%;
-  max-width:320px;
+  .side-menu{
+    width:75%;
+    max-width:320px;
+  }
+
 }
 
 .menu-socials{
