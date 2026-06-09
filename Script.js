@@ -1,5 +1,3 @@
-Script . js
-
 <script>
 
 function openMenu(){
