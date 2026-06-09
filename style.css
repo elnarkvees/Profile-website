@@ -6,6 +6,12 @@
   --gray:#b5b5b5;
 }
 
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
 html{
   scroll-behavior:smooth;
 }
@@ -273,7 +279,7 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .side-menu{
+.side-menu{
   width:75%;
   max-width:320px;
 }
