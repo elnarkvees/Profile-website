@@ -31,23 +31,42 @@ body{
 
 .navbar{
   position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  padding:20px 7%;
+  top:15px;
+  left:50%;
+  transform:translateX(-50%);
+  width:92%;
+  max-width:1200px;
+  padding:18px 30px;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(0,0,0,.6);
-  backdrop-filter:blur(10px);
+
+  background:rgba(20,20,20,.45);
+  backdrop-filter:blur(18px);
+
+  border:1px solid rgba(0,255,153,.25);
+  border-radius:18px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.35),
+  0 0 20px rgba(0,255,153,.08);
+
   z-index:1000;
+  transition:.35s;
 }
 
 .logo{
-  font-size:1.8rem;
+  font-size:1.9rem;
   font-weight:900;
-  letter-spacing:3px;
+  letter-spacing:4px;
   text-transform:uppercase;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.logo:hover{
+  transform:scale(1.03);
 }
 
 .logo span{
@@ -55,9 +74,15 @@ body{
 }
 
 .menu-btn{
-  font-size:30px;
+  font-size:32px;
   color:white;
   cursor:pointer;
+  transition:.3s;
+}
+
+.menu-btn:hover{
+  color:var(--green);
+  transform:rotate(90deg);
 }
 
 /* SIDE MENU */
