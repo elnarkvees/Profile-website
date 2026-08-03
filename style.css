@@ -304,6 +304,18 @@ section{
   margin:15px 0;
 }
 
+.about{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  line-height:1.9;
+  color:#ddd;
+  background:#121212;
+  padding:40px;
+  border-radius:20px;
+  border:1px solid #222;
+}
+
 /* FOOTER */
 
 footer{
