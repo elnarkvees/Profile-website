@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ELNARK VEES | Afro + HipHop Artist</title>
+<title>ELNARK VEES | Afro • Hip Hop • storytelling</title>
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -117,6 +117,79 @@ Watch Videos
 
 </section>
 
+<!-- NOW PLAYING -->
+
+<section id="now-playing" class="hidden">
+
+<h2 class="section-title">Now Playing</h2>
+
+<div class="now-playing-card">
+
+<img src="cover1.jpg.PNG" alt="WEEKENDY Cover">
+
+<div class="now-playing-content">
+
+<h3>WEEKENDY</h3>
+
+<p>
+My latest release. Turn it up and experience the vibe.
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://youtu.be/2UsNZP35c9o?si=tq_xv6C8wXKI2JpF"
+class="btn-main"
+target="_blank">
+
+▶ Listen Now
+
+</a>
+
+<a href="#videos"
+class="btn-alt">
+
+🎥 Watch Performance
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section id="stats" class="hidden">
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h2>8K+</h2>
+<p>YouTube Views</p>
+</div>
+
+<div class="stat-card">
+<h2>3</h2>
+<p>Official Releases</p>
+</div>
+
+<div class="stat-card">
+<h2>2</h2>
+<p>Music Videos</p>
+</div>
+
+<div class="stat-card">
+<h2>Growing</h2>
+<p>The EV Movement</p>
+</div>
+
+</div>
+
+</section>
+  
 <!-- MUSIC -->
 
 <section id="music" class="hidden">
@@ -192,41 +265,111 @@ allowfullscreen>
 
 <h2 class="section-title">Gallery</h2>
 
+<div class="gallery-filter">
+
+<button class="filter-btn active" data-filter="all">All</button>
+
+<button class="filter-btn" data-filter="performance">Performance</button>
+
+<button class="filter-btn" data-filter="studio">Studio</button>
+
+<button class="filter-btn" data-filter="behind-scenes">BTS</button>
+
+<button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+
+<button class="filter-btn" data-filter="ev">EV</button>
+
+</div>
+
 <div class="gallery-grid">
 
-<img src="images/gallery/performance/perf1.jpg.png" alt="Performance">
-<img src="images/gallery/performance/perf2.jpg.png" alt="Performance">
-<img src="images/gallery/studio/studio1.jpg.jpeg" alt="Studio">
-<img src="images/gallery/lifestyle/life1.jpg.jpeg" alt="Lifestyle">
+<img src="images/gallery/performance/perf1.jpg.png"
+class="gallery-item performance"
+alt="Performance">
+
+<img src="images/gallery/performance/perf2.jpg.png"
+class="gallery-item performance"
+alt="Performance">
+
+<img src="images/gallery/studio/studio1.jpg.jpeg"
+class="gallery-item studio"
+alt="Studio">
+
+<img src="images/gallery/studio/studio2.jpg.JPG"
+class="gallery-item studio"
+alt="Studio">
+
+<img src="images/gallery/behind-scenes/bts1.jpg.jpeg"
+class="gallery-item behind-scenes"
+alt="Behind The Scenes">
+
+<img src="images/gallery/behind-scenes/bts2.jpg.JPG"
+class="gallery-item behind-scenes"
+alt="Behind The Scenes">
+
+<img src="images/gallery/lifestyle/life1.jpg.jpeg"
+class="gallery-item lifestyle"
+alt="Lifestyle">
+
+<img src="images/gallery/lifestyle/life2.jpg.JPG"
+class="gallery-item lifestyle"
+alt="Lifestyle">
+
+<img src="images/gallery/ev/logo.jpg"
+class="gallery-item ev"
+alt="EV">
 
 </div>
 
 </section>
 
-<!-- STORE -->
+<!-- EV STORE -->
 
 <section id="store" class="hidden">
 
-<h2 class="section-title">
-The EV Store
-</h2>
+<h2 class="section-title">The EV Store</h2>
 
-<div class="about">
+<div class="store-grid">
 
-<h3>Coming Soon</h3>
+<div class="store-card">
 
-<p>
+<img src="images/store/hoodie.jpg" alt="EV Hoodie">
 
-The EV Store will feature
-exclusive hoodies,
-T-shirts,
-caps,
-bags,
-shoes,
-accessories
-and limited collections.
+<h3>EV Hoodie</h3>
 
-</p>
+<span class="coming-badge">Coming Soon</span>
+
+</div>
+
+<div class="store-card">
+
+<img src="images/store/tshirt.jpg" alt="EV T-Shirt">
+
+<h3>EV T-Shirt</h3>
+
+<span class="coming-badge">Coming Soon</span>
+
+</div>
+
+<div class="store-card">
+
+<img src="images/store/cap.jpg" alt="EV Cap">
+
+<h3>EV Cap</h3>
+
+<span class="coming-badge">Coming Soon</span>
+
+</div>
+
+<div class="store-card">
+
+<img src="images/store/bag.jpg" alt="EV Bag">
+
+<h3>EV Bag</h3>
+
+<span class="coming-badge">Coming Soon</span>
+
+</div>
 
 </div>
 
@@ -349,6 +492,16 @@ elnark.vees@gmail.com
 © 2026 ELNARK VEES. All Rights Reserved.
 
 </footer>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+<span class="close-lightbox">&times;</span>
+
+<img id="lightbox-img" src="" alt="Gallery Image">
+
+</div>
 
 <script src="script.js"></script>
 
