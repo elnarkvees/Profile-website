@@ -692,6 +692,68 @@ footer hr{
   transform:rotate(90deg);
 }
 
+/* ==========================
+   BACK TO TOP
+========================== */
+
+#backToTop{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:var(--green);
+
+color:black;
+
+font-size:22px;
+
+cursor:pointer;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 0 20px rgba(0,255,153,.35);
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.35s;
+
+z-index:9999;
+
+}
+
+#backToTop.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+#backToTop:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 0 28px rgba(0,255,153,.55);
+
+}
+
 @media(max-width:768px){
 
   .video-grid{
