@@ -371,82 +371,86 @@ max-width:320px;
 }
 
 /* ==========================
-   PLAYER
+   OFFICIAL MUSIC
 ========================== */
 
-.player-card{
+.music-player-grid{
 
-display:flex;
+display:grid;
 
-align-items:center;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 
 gap:30px;
 
+}
+
+.music-player-card{
+
 background:var(--card);
 
-padding:30px;
+border:1px solid rgba(0,255,153,.2);
 
 border-radius:20px;
 
-border:1px solid rgba(0,255,153,.18);
-
-}
-
-.player-card img{
-
-width:220px;
-
-border-radius:15px;
-
-}
-
-.player-info{
-
-flex:1;
-
-}
-
-.player-info h3{
-
-font-size:2rem;
-
-color:var(--green);
-
-margin-bottom:10px;
-
-}
-
-.player-info p{
-
-margin-bottom:20px;
-
-color:#bbb;
-
-}
-
-.player-info audio{
-
-width:100%;
-
-}
-
-@media(max-width:768px){
-
-.player-card{
-
-flex-direction:column;
+padding:20px;
 
 text-align:center;
 
+transition:.35s ease;
+
+box-shadow:0 0 20px rgba(0,255,153,.08);
+
 }
 
-.player-card img{
+.music-player-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px rgba(0,255,153,.25);
+
+}
+
+.music-player-card img{
 
 width:100%;
 
-max-width:300px;
+height:280px;
+
+object-fit:cover;
+
+border-radius:15px;
+
+margin-bottom:20px;
 
 }
+
+.music-player-card h3{
+
+color:var(--green);
+
+margin-bottom:15px;
+
+font-size:1.6rem;
+
+}
+
+.music-player-card p{
+
+color:#bbb;
+
+margin-bottom:20px;
+
+}
+
+.music-player-card iframe{
+
+width:100%;
+
+height:180px;
+
+border:none;
+
+border-radius:12px;
 
 }
 
