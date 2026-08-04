@@ -215,3 +215,45 @@ loader.classList.add("hide");
 
 });
 
+// ==========================
+// STATS COUNTER
+// ==========================
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter=>{
+
+const updateCounter=()=>{
+
+const target=+counter.dataset.target;
+
+const current=+counter.innerText.replace("K+","");
+
+const increment=target/100;
+
+if(current<target){
+
+counter.innerText=Math.ceil(current+increment);
+
+setTimeout(updateCounter,20);
+
+}else{
+
+if(target>=1000){
+
+counter.innerText=(target/1000)+"K+";
+
+}else{
+
+counter.innerText=target;
+
+}
+
+}
+
+};
+
+updateCounter();
+
+});
+
