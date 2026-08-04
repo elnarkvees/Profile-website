@@ -371,6 +371,86 @@ max-width:320px;
 }
 
 /* ==========================
+   PLAYER
+========================== */
+
+.player-card{
+
+display:flex;
+
+align-items:center;
+
+gap:30px;
+
+background:var(--card);
+
+padding:30px;
+
+border-radius:20px;
+
+border:1px solid rgba(0,255,153,.18);
+
+}
+
+.player-card img{
+
+width:220px;
+
+border-radius:15px;
+
+}
+
+.player-info{
+
+flex:1;
+
+}
+
+.player-info h3{
+
+font-size:2rem;
+
+color:var(--green);
+
+margin-bottom:10px;
+
+}
+
+.player-info p{
+
+margin-bottom:20px;
+
+color:#bbb;
+
+}
+
+.player-info audio{
+
+width:100%;
+
+}
+
+@media(max-width:768px){
+
+.player-card{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.player-card img{
+
+width:100%;
+
+max-width:300px;
+
+}
+
+}
+
+/* ==========================
    STATS
 ========================== */
 
