@@ -289,6 +289,32 @@ section{
 
 /* GALLERY */
 
+/* GALLERY FILTER */
+
+.gallery-filter{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-bottom:35px;
+}
+
+.filter-btn{
+  padding:12px 24px;
+  border:2px solid var(--green);
+  background:transparent;
+  color:white;
+  border-radius:30px;
+  cursor:pointer;
+  transition:.3s;
+  font-weight:bold;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+  background:var(--green);
+  color:black;
+}
 .gallery-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
