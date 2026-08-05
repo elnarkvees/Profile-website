@@ -235,11 +235,11 @@ animation:loading 2s forwards;
 
     text-decoration:none;
 
-    font-size:28px;
+    font-size:22px;
 
     font-weight:600;
 
-    margin:12px 0;
+    margin:8px 0;
 
     transition:.3s;
 }
