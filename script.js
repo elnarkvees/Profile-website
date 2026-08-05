@@ -81,11 +81,15 @@ galleryImages.forEach(image => {
 
 });
 
-closeLightbox.addEventListener("click", () => {
+if (closeLightbox) {
 
-  lightbox.classList.remove("active");
+  closeLightbox.addEventListener("click", () => {
 
-});
+    lightbox.classList.remove("active");
+
+  });
+
+}
 
 lightbox.addEventListener("click", (e) => {
 
