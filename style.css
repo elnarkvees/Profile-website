@@ -306,7 +306,7 @@ animation:loading 2s forwards;
   justify-content:center;
   align-items:center;
   text-align:center;
-  padding:100px 20px;
+  padding:150px 20px 100px;
 
  background:
 linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)),
