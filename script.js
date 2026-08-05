@@ -156,31 +156,39 @@ window.addEventListener("scroll", () => {
 
 });
 
-backToTop.addEventListener("click", () => {
+if (backToTop) {
 
-  window.scrollTo({
+  backToTop.addEventListener("click", () => {
 
-    top:0,
+    window.scrollTo({
 
-    behavior:"smooth"
+      top:0,
+
+      behavior:"smooth"
+
+    });
 
   });
 
-});
+}
 
 // ==========================
 // LOADER
 // ==========================
 
-window.addEventListener("load", ()=>{
+window.addEventListener("load", () => {
 
-const loader=document.getElementById("loader");
+  const loader = document.getElementById("loader");
 
-setTimeout(()=>{
+  if (loader) {
 
-loader.classList.add("hide");
+    setTimeout(() => {
 
-},2000);
+      loader.classList.add("hide");
+
+    }, 1500);
+
+  }
 
 });
 
