@@ -184,7 +184,7 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-      loader.classList.add("hide");
+      loader.style.display = "none";
 
     }, 1500);
 
