@@ -166,21 +166,22 @@ animation:loading 2s forwards;
     transition:all .35s ease;
 }
 
-.logo{
-  font-size:1.9rem;
-  font-weight:900;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  cursor:pointer;
-  transition:.3s;
+.menu-logo{
+    white-space:nowrap;
+    text-align:center;
+    margin-bottom:40px;
 }
 
-.logo:hover{
-  transform:scale(1.03);
+.menu-logo h2{
+    margin:0;
+    font-family:'Bebas Neue', sans-serif;
+    font-size:46px;
+    letter-spacing:2px;
+    font-weight:400;
 }
 
-.logo span{
-  color:var(--green);
+.menu-logo span{
+    color:var(--green);
 }
 
 .menu-btn{
