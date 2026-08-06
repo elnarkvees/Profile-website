@@ -227,12 +227,14 @@ animation:loading 2s forwards;
 
 .close-btn{
     position:absolute;
-    top:25px;
+    top:20px;
     right:25px;
 
     font-size:40px;
-    color:#fff;
+    color:white;
     cursor:pointer;
+
+    z-index:3001;
 }
 
 .menu-logo{
