@@ -230,7 +230,7 @@ animation:loading 2s forwards;
     z-index:3001;
 }
 
-/* SIDE MENU LOGO */
+/* SIDE MENU ARTIST LOGO */
 
 .menu-logo{
     width:100%;
@@ -241,19 +241,34 @@ animation:loading 2s forwards;
 
 .menu-logo h2{
     margin:0;
+
     font-family:'Barlow Condensed', sans-serif;
-    font-size:34px;
+    font-size:36px;
     font-weight:700;
     letter-spacing:1px;
     line-height:1;
-    color:white;
-    text-transform:uppercase;
+
+    /* dark metallic fill */
+    color:#080808;
+
+    /* silver outline */
+    -webkit-text-stroke:1.2px #d7d9dc;
+
+    /* subtle metallic glow */
+    text-shadow:
+        0 0 2px #ffffff,
+        0 0 8px rgba(210,215,220,.35);
 }
 
 .menu-logo span{
-    color:var(--green);
-}
+    color:#080808;
 
+    -webkit-text-stroke:1.2px #d7d9dc;
+
+    text-shadow:
+        0 0 2px #ffffff,
+        0 0 8px rgba(210,215,220,.35);
+}
 
 /* SIDE MENU LINKS */
 
