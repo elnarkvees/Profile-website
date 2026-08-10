@@ -1062,3 +1062,15 @@ box-shadow:0 0 28px rgba(0,255,153,.55);
   transform:translateY(-5px);
 
 }
+
+/* ==========================
+   WEBSITE PAGE VIEWS
+========================== */
+
+.site-page {
+    display: none;
+}
+
+.site-page.active {
+    display: block;
+}
