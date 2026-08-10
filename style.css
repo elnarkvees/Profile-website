@@ -156,7 +156,7 @@ animation:loading 2s forwards;
     justify-content:space-between;
     align-items:center;
 
-    padding:18px 28px;
+    padding:16px 28px;
 
     background:rgba(15,15,15,.55);
     backdrop-filter:blur(20px);
@@ -173,15 +173,20 @@ animation:loading 2s forwards;
     transition:all .35s ease;
 }
 
-.menu-logo h2{
-    font-family:'Barlow Condensed',sans-serif;
-    font-size:56px;
+/* NAVBAR LOGO */
+
+.navbar .menu-logo h2{
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:28px;
     font-weight:700;
-    letter-spacing:2px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:#f2f2f2;
+    white-space:nowrap;
 }
 
-.menu-logo span{
-    color:var(--green);
+.navbar .menu-logo span{
+    color:#f2f2f2;
 }
 
 .menu-btn{
@@ -237,42 +242,39 @@ animation:loading 2s forwards;
 
 /* SIDE MENU ARTIST LOGO */
 
-.menu-logo{
+.side-menu .menu-logo{
     width:100%;
     text-align:center;
     margin:0 0 32px;
     white-space:nowrap;
 }
 
-.menu-logo h2{
+.side-menu .menu-logo h2{
     margin:0;
 
     font-family:'Barlow Condensed', sans-serif;
-    font-size:36px;
+    font-size:38px;
     font-weight:700;
-    letter-spacing:1px;
+    letter-spacing:1.5px;
     line-height:1;
 
-    /* dark metallic fill */
-    color:#080808;
+    color:#111111;
 
-    /* silver outline */
-    -webkit-text-stroke:1.2px #d7d9dc;
+    -webkit-text-stroke:1.4px #d9dde1;
 
-    /* subtle metallic glow */
     text-shadow:
-        0 0 2px #ffffff,
-        0 0 8px rgba(210,215,220,.35);
+        0 0 2px rgba(255,255,255,.9),
+        0 0 10px rgba(217,221,225,.25);
 }
 
-.menu-logo span{
-    color:#080808;
+.side-menu .menu-logo span{
+    color:#111111;
 
-    -webkit-text-stroke:1.2px #d7d9dc;
+    -webkit-text-stroke:1.4px #d9dde1;
 
     text-shadow:
-        0 0 2px #ffffff,
-        0 0 8px rgba(210,215,220,.35);
+        0 0 2px rgba(255,255,255,.9),
+        0 0 10px rgba(217,221,225,.25);
 }
 
 /* SIDE MENU LINKS */
