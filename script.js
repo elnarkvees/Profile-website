@@ -304,3 +304,27 @@ function openPage(pageId) {
     }
 
 }
+
+// ==========================
+// HOME NAVIGATION
+// ==========================
+
+function openHome() {
+
+    // Close the side menu
+    closeMenu();
+
+    // Hide all separate pages
+    const pages = document.querySelectorAll(".site-page");
+
+    pages.forEach(page => {
+        page.classList.remove("active");
+    });
+
+    // Return to the top of the homepage
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
