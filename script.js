@@ -234,3 +234,70 @@ updateCounter();
 
 });
 
+// ==========================
+// EV SHOPPING CART
+// ==========================
+
+let cart = [];
+
+const addCartButtons = document.querySelectorAll(".add-cart");
+
+addCartButtons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const name = button.dataset.name;
+    const price = Number(button.dataset.price);
+
+    const existingItem = cart.find(item => item.name === name);
+
+    if (existingItem) {
+
+      existingItem.quantity++;
+
+    } else {
+
+      cart.push({
+        name: name,
+        price: price,
+        quantity: 1
+      });
+
+    }
+
+    updateCart();
+
+  });
+
+});
+
+function updateCart(){
+
+  let totalItems = 0;
+  let totalPrice = 0;
+
+  cart.forEach(item => {
+
+    totalItems += item.quantity;
+
+    totalPrice += item.price * item.quantity;
+
+  });
+
+  const cartCount = document.getElementById("cartCount");
+
+  if(cartCount){
+
+    cartCount.innerText = totalItems;
+
+  }
+
+  const cartTotal = document.getElementById("cartTotal");
+
+  if(cartTotal){
+
+    cartTotal.innerText = "$" + totalPrice.toFixed(2);
+
+  }
+
+}
