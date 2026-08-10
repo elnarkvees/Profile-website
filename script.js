@@ -301,3 +301,36 @@ function updateCart(){
   }
 
 }
+
+// ==========================
+// PAGE NAVIGATION
+// ==========================
+
+function openPage(pageId) {
+
+    // Close the side menu
+    closeMenu();
+
+    // Hide every separate page
+    const pages = document.querySelectorAll(".site-page");
+
+    pages.forEach(page => {
+        page.classList.remove("active");
+    });
+
+    // Find the page that was selected
+    const selectedPage = document.getElementById(pageId);
+
+    if (selectedPage) {
+
+        selectedPage.classList.add("active");
+
+        // Start at the top of the selected page
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+}
