@@ -173,32 +173,25 @@ animation:loading 2s forwards;
     transition:all .35s ease;
 }
 
-/* NAVBAR LOGO */
+/* NAVBAR ARTIST LOGO */
 
-.navbar .menu-logo h2{
+.navbar .logo{
     font-family:'Oswald', sans-serif;
-    font-size:28px;
-    font-weight:700;
-    letter-spacing:1.5px;
+    font-size:24px;
+    font-weight:600;
+    letter-spacing:2px;
     text-transform:uppercase;
     color:#f2f2f2;
     white-space:nowrap;
 }
 
-.navbar .menu-logo span{
-    color:#f2f2f2;
+.navbar .logo span{
+    color:var(--green);
+    font-weight:600;
 }
 
-.menu-btn{
-  font-size:32px;
-  color:white;
-  cursor:pointer;
-  transition:.3s;
-}
-
-.menu-btn:hover{
-  color:var(--green);
-  transform:rotate(90deg);
+.navbar .logo:hover{
+    letter-spacing:3px;
 }
 
 /* SIDE MENU */
