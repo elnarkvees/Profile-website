@@ -1,14 +1,561 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EV Store | ELNARK VEES</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.store-page{
+    min-height:100vh;
+    background:#0a0a0a;
+    color:white;
+}
+
+/* STORE HEADER */
+
+.store-header{
+    padding:140px 8% 50px;
+    text-align:center;
+}
+
+.store-header h1{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:clamp(3rem,8vw,6rem);
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.store-header h1 span{
+    color:var(--green);
+}
+
+.store-header p{
+    color:#aaa;
+    font-size:1.1rem;
+}
+
+/* PRODUCTS */
+
+.store-products{
+    width:84%;
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+/* PRODUCT CARD */
+
+.product-card{
+    background:#151515;
+    border:1px solid rgba(0,255,153,.18);
+    border-radius:20px;
+    overflow:hidden;
+    text-align:center;
+
+    transition:.35s ease;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--green);
+    box-shadow:0 0 25px rgba(0,255,153,.20);
+}
+
+.product-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.product-info{
+    padding:22px;
+}
+
+.product-info h2{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:1.7rem;
+    letter-spacing:1px;
+    margin-bottom:10px;
+}
+
+.product-info p{
+    color:#aaa;
+    line-height:1.5;
+    margin-bottom:10px;
+}
+
+.product-price{
+    color:var(--green);
+    font-size:1.4rem;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.add-cart{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+
+    background:var(--green);
+    color:#000;
+
+    font-weight:bold;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.add-cart:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 18px rgba(0,255,153,.45);
+}
+
+/* CART */
+
+.cart-box{
+    width:84%;
+    max-width:600px;
+    margin:60px auto;
+
+    padding:30px;
+
+    background:#121212;
+
+    border:1px solid rgba(0,255,153,.2);
+    border-radius:20px;
+
+    text-align:center;
+}
+
+.cart-box h2{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+#cartCount{
+    color:var(--green);
+}
+
+#cartTotal{
+    color:var(--green);
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+/* PAYMENT */
+
+.payment-box{
+    width:84%;
+    max-width:700px;
+    margin:30px auto 80px;
+
+    text-align:center;
+}
+
+.payment-box h2{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.payment-box p{
+    color:#999;
+    margin-bottom:20px;
+}
+
+.payment-methods{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.payment-method{
+    padding:12px 20px;
+
+    border:1px solid #333;
+    border-radius:30px;
+
+    color:#ddd;
+}
+
+/* BACK HOME */
+
+.store-home{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.store-home a{
+    display:inline-block;
+
+    padding:12px 28px;
+
+    border:1px solid var(--green);
+    border-radius:30px;
+
+    color:var(--green);
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.store-home a:hover{
+    background:var(--green);
+    color:black;
+}
+
+/* SOCIALS */
+
+.store-socials{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+
+    padding:50px 20px;
+
+    border-top:1px solid #222;
+}
+
+.store-socials a{
+    color:white;
+    font-size:28px;
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.store-socials a:hover{
+    color:var(--green);
+    transform:translateY(-5px);
+}
+
+@media(max-width:600px){
+
+    .store-header{
+        padding-top:120px;
+    }
+
+    .store-products{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
-  
-</body>
 
+<div class="store-page">
+
+    <!-- STORE HEADER -->
+
+    <header class="store-header">
+
+        <h1>
+            EV <span>STORE</span>
+        </h1>
+
+        <p>
+            Official ELNARK VEES merchandise & music.
+        </p>
+
+    </header>
+
+
+    <!-- PRODUCTS -->
+
+    <section class="store-products">
+
+
+        <!-- CD 1 -->
+
+        <div class="product-card">
+
+            <img src="images/cd1.jpg" alt="ELNARK VEES CD">
+
+            <div class="product-info">
+
+                <h2>EV — WEEKENDY</h2>
+
+                <p>
+                    Official music CD.
+                    Black artwork with premium printed disc.
+                </p>
+
+                <div class="product-price">
+                    $12.99
+                </div>
+
+                <button
+                    class="add-cart"
+                    data-name="EV — WEEKENDY CD"
+                    data-price="12.99">
+
+                    ADD TO CART
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CD 2 -->
+
+        <div class="product-card">
+
+            <img src="images/cd2.jpg" alt="ELNARK VEES CD">
+
+            <div class="product-info">
+
+                <h2>EV — LATEST RELEASE</h2>
+
+                <p>
+                    Official ELNARK VEES music CD.
+                    Premium printed artwork.
+                </p>
+
+                <div class="product-price">
+                    $12.99
+                </div>
+
+                <button
+                    class="add-cart"
+                    data-name="EV — LATEST RELEASE CD"
+                    data-price="12.99">
+
+                    ADD TO CART
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CD 3 -->
+
+        <div class="product-card">
+
+            <img src="images/cd3.jpg" alt="ELNARK VEES CD">
+
+            <div class="product-info">
+
+                <h2>EV — AFTER HOURS</h2>
+
+                <p>
+                    Official music CD with
+                    exclusive artwork.
+                </p>
+
+                <div class="product-price">
+                    $14.99
+                </div>
+
+                <button
+                    class="add-cart"
+                    data-name="EV — AFTER HOURS CD"
+                    data-price="14.99">
+
+                    ADD TO CART
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CD 4 -->
+
+        <div class="product-card">
+
+            <img src="images/cd4.jpg" alt="ELNARK VEES CD">
+
+            <div class="product-info">
+
+                <h2>EV — THE COLLECTION</h2>
+
+                <p>
+                    A special ELNARK VEES
+                    music collection CD.
+                </p>
+
+                <div class="product-price">
+                    $16.99
+                </div>
+
+                <button
+                    class="add-cart"
+                    data-name="EV — THE COLLECTION CD"
+                    data-price="16.99">
+
+                    ADD TO CART
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CD 5 -->
+
+        <div class="product-card">
+
+            <img src="images/cd5.jpg" alt="ELNARK VEES CD">
+
+            <div class="product-info">
+
+                <h2>EV — LIMITED EDITION</h2>
+
+                <p>
+                    Limited edition physical
+                    ELNARK VEES release.
+                </p>
+
+                <div class="product-price">
+                    $19.99
+                </div>
+
+                <button
+                    class="add-cart"
+                    data-name="EV — LIMITED EDITION CD"
+                    data-price="19.99">
+
+                    ADD TO CART
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CART -->
+
+    <div class="cart-box">
+
+        <h2>
+            YOUR CART:
+            <span id="cartCount">0</span>
+        </h2>
+
+        <p>
+            Total:
+            <span id="cartTotal">$0.00</span>
+        </p>
+
+    </div>
+
+
+    <!-- PAYMENT -->
+
+    <div class="payment-box">
+
+        <h2>PAYMENT OPTIONS</h2>
+
+        <p>
+            Secure payment options will be available at checkout.
+        </p>
+
+        <div class="payment-methods">
+
+            <div class="payment-method">VISA</div>
+
+            <div class="payment-method">MASTERCARD</div>
+
+            <div class="payment-method">PAYPAL</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BACK HOME -->
+
+    <div class="store-home">
+
+        <a href="index.html">
+            ← BACK TO HOME
+        </a>
+
+    </div>
+
+
+    <!-- SOCIAL ICONS -->
+
+    <div class="store-socials">
+
+        <a href="#" aria-label="Instagram">Instagram</a>
+
+        <a href="#" aria-label="TikTok">TikTok</a>
+
+        <a href="#" aria-label="YouTube">YouTube</a>
+
+        <a href="#" aria-label="Facebook">Facebook</a>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+                <h2>ELNARK <span>VEES</span></h2>
+                <p>Afro • Hip Hop • Storytelling</p>
+            </div>
+
+            <div>
+                <h3>EXPLORE</h3>
+
+                <a href="index.html">Home</a>
+                <a href="music.html">Music</a>
+                <a href="video.html">Videos</a>
+                <a href="tour.html">Tour</a>
+                <a href="gallery.html">Gallery</a>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="copyright">
+            © 2026 ELNARK VEES. All Rights Reserved.
+        </div>
+
+    </footer>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
 </html>
